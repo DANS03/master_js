@@ -1,6 +1,6 @@
 'use strict'
 
-var intro = "Wellcome to 04 const";
+var intro = "Welcome to 04 const";
 
 console.log(intro);
 

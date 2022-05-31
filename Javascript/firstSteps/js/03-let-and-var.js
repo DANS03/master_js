@@ -1,6 +1,6 @@
 'use strict'
 
-var intro = "Wellcome to 03 let and var JS";
+var intro = "Welcome to 03 let and var JS";
 
 console.log(intro);
 

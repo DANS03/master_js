@@ -2,7 +2,7 @@
 
 //Variables'
 
-var intro = "Wellcome to 02 vars JS";
+var intro = "Welcome to 02 vars JS";
 
 console.log(intro);
 
