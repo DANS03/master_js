@@ -29,7 +29,8 @@ window.addEventListener('load', () => {
 
     button.addEventListener('mouseover', () => {
         console.log("hi");
-        button.style.background = "#ccc";
+        button.style.background = "#ccc"; //you can also use the operator this 
+        this.style.background = "grey";
     });
 
 
