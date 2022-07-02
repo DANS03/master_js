@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Form Page</title>
+    <script type="text/javascript" src="js/32.dom-exercice.js"></script>
+    <style>
+        .box {
+            width: 250px;
+            height: 250px;
+            float: 250px;
+            margin: 20px;
+        }
+        
+        .dashed {
+            border: 3px dashed black;
+        }
+        
+        h3 {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Excercises DOM, Events and functions</h1>
+    <!--
+        1. Fort tha have a space for: name, Lastname and age.     
+        2. Submit button.
+        3. Show data in screen when submited.
+        4. Validate that the data is correct
+    !-->
+
+    <div class="box">
+        <form action="#" id="form" onsubmit="return false">
+            <label for="name">Name</label>
+            </br>
+            <input type="text" name="name" id="name" placeholder="Name..." />
+            </br>
+            </br>
+
+            <label for="Lastname">Lastname</label>
+            </br>
+            <input type="text" name="lastname" id="lastname" placeholder="Lastname..." />
+
+            </br>
+            </br>
+
+            <label for="Lastname">Age </label>
+            </br>
+            <input type="number" name="age" id="age" placeholder="Age..." />
+            </br>
+            </br>
+            <button type="submit" value="submit" id="submit">Submit</button>
+
+        </form>
+    </div>
+
+    <div class="box dashed">
+
+        <h3>Users Info</h3>
+        <hr>
+
+
+    </div>
+</body>
+
+</html>
