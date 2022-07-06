@@ -9,15 +9,57 @@
 
     <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
 
+    <script type="text/javascript" src="js/01-selectors.js"></script>
+
     <script>
         $(document).ready(() => {
             console.log('Loaded document and Jquery');
         })
     </script>
+
+    <style>
+        .big {
+            font-size: 30px;
+        }
+        
+        .margin-top {
+            display: block;
+            background-color: cornflowerblue;
+        }
+        
+        .underline {
+            border-bottom: 2px solid greenyellow;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Learning JQuery</h1>
+
+    <p id="red" class="interesting">JQuery exercices</p>
+    <p id="green" class="blank">Practicing with selectors</p>
+    <p id="blue" class="interesting">And I want to be blue!</p>
+    <br/>
+    <p class="blank">I'm not interesting!</p>
+
+
+    <ul>
+        <li title="google">Google</li>
+        <li title="yahoo">Yahoo</li>
+        <li title="duckDuckGo">Duck duck go</li>
+    </ul>
+
+
+    <div id="box">
+        <p>Hello I'm a box</p>
+
+        <ul>
+            <li>Li 1</li>
+            <li class="underline">Li 2</li>
+        </ul>
+
+        <span class="underline">I'm a span</span>
+    </div>
 
 </body>
 
