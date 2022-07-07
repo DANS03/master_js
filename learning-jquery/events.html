@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery learning-page</title>
+
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="js/02-events.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            console.log('Loaded document and Jquery');
+        })
+    </script>
+
+    <style>
+        #box {
+            width: 250px;
+            height: 250px;
+            border: 2px solid black;
+            background: yellow;
+            transition: 300ms all;
+        }
+        /*
+        
+        #box:hover {
+            background: greenyellow;
+            cursor: pointer;
+        }
+        */
+        
+        #showInfo {
+            width: 250px;
+            height: 250px;
+            border: 2px dashed black;
+            display: none;
+        }
+        
+        #follower {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            display: block;
+            border-radius: 50px;
+            background: grey;
+            opacity: 0.5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Learning JQuery -events</h1>
+
+    <div id="box">
+        I'm a box!
+    </div>
+
+    <br/>
+    <br/>
+
+    <form id="form-info">
+        <input type="text" placeholder="Enter your info..." id="info"></input>
+
+    </form>
+
+    <br/>
+
+    <div id="showInfo">
+    </div>
+
+    <div id='follower'>
+    </div>
+
+</body>
+
+</html>
