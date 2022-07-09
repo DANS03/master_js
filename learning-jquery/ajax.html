@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ajax html</title>
+
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="js/05-ajax.js"></script>
+
+    <style>
+        #data {
+            border: 2px solid green;
+            height: 250px;
+            width: 250px;
+            overflow: scroll;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Learning Ajax petitions</h1>
+
+    <form action="https://reqres.in/api/users" method="POST" id="form">
+
+        <input type="text" id="name" name='name' placeholder="Enter the name..."></input>
+        <input type="text" id="web" name='web' placeholder="Enter the Web..."></input>
+
+        <button type="submit">POST</button>
+
+    </form>
+
+    <br/>
+    <br/>
+
+
+
+    <div id="data"></div>
+</body>
+
+</html>
