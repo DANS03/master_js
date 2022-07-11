@@ -43,5 +43,24 @@ $(document).ready(() => {
         $('#effects-box').toggle('shake', {}, 'slow');
     });
 
+    //Tooltip
 
+    $(document).tooltip(); //show a white box with the title of th html
+
+    //https://www.bestjquery.com/demo/jquery-tooltip-plugin/
+
+
+    //Dialog
+
+    $('#throw-pop-up').click(function() {
+        $('#popup').dialog();
+    })
+
+
+    //DatePicker
+    $('#calendar').datepicker();
+
+    //tabs
+
+    $('#tabs').tabs();
 });
