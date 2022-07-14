@@ -1,0 +1,167 @@
+    /*Coded by David Naranjo*/
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    
+    .clearfix {
+        float: none;
+        clear: both;
+    }
+    
+    body {
+        background: url('../images/blue-background.jpg');
+        background-attachment: fixed;
+        /*This leaves pinned the background and avoids movement of if*/
+    }
+    
+    #global {
+        width: 65%;
+        margin: 0px auto;
+        margin-top: 30px;
+        padding: 20px;
+        background: white;
+        box-shadow: 0px 0px 2px #ccc;
+    }
+    
+    #logo {
+        font-family: "Verdana", "Arial";
+        font-size: 30px;
+        line-height: 75px;
+        letter-spacing: 4px;
+        background: royalblue;
+        color: white;
+        text-align: center;
+        width: 385px;
+        height: 80px;
+        float: left;
+        margin-bottom: 20px;
+    }
+    
+    #menu {
+        font-family: Helvetica, Arial;
+        background: #333;
+        width: 100%;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    
+    #menu ul {
+        line-height: 46px;
+        list-style: none;
+    }
+    
+    #menu ul li {
+        height: 46px;
+        display: inline-block;
+        /*Displays all elements in a line*/
+        transition: all 300ms;
+    }
+    
+    #menu ul li:hover {
+        background: royalblue;
+    }
+    
+    #menu a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    #posts {
+        width: 60%;
+        float: left;
+        font-family: Helvetica, Arial;
+    }
+    
+    #posts h2 {
+        font-size: xx-large;
+    }
+    
+    .post {
+        font-size: 20px;
+        color: #333;
+        padding: 5px;
+    }
+    
+    .post .date {
+        display: block;
+        color: gray;
+        margin-top: 5px;
+    }
+    
+    .post p {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        line-height: 20px;
+        text-align: justify;
+    }
+    
+    .button-more {
+        display: block;
+        padding: 15px;
+        background: royalblue;
+        color: white;
+        text-decoration: none;
+        margin-top: 10px;
+        font-size: 14px;
+        width: 70px;
+        text-align: center;
+    }
+    
+    #sidebar {
+        font-family: Helvetica, Arial;
+        width: 30%;
+        float: right;
+    }
+    
+    #sidebar h4 {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+        line-height: 10px;
+        color: #333;
+        background: url("../images/lines.png")repeat-x;
+    }
+    
+    #sidebar img {
+        width: 90%;
+    }
+    
+    #sidebar p {
+        font-size: 15px;
+        text-align: justify;
+    }
+    
+    form input[type='text'] {
+        padding: 5px;
+        border-radius: 2px;
+        border: 1px solid #ccc;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    
+    form input[type='submit'] {
+        background: #ccc;
+        padding: 5px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    
+    footer {
+        font-family: Helvetica, Arial;
+        color: white;
+        height: 47px;
+        background: rgba(51, 51, 51, 0.70);
+        margin: 0px auto;
+        width: 65%;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 50px;
+        line-height: 47px;
+        text-align: center;
+    }
