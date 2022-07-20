@@ -1,0 +1,15 @@
+#logo {
+    background: royalblue;
+}
+
+#menu ul li:hover {
+    background: royalblue;
+}
+
+.button-more {
+    background: royalblue;
+}
+
+body {
+    background: url('../images/blue-background.jpg');
+}

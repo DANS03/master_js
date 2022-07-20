@@ -7,6 +7,7 @@
 
     <!--Loading CSS-->
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link id="theme" rel="stylesheet" type="text/css" href="css/blue.css" />
 
     <!--JQuery-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -24,6 +25,12 @@
 </head>
 
 <body>
+
+    <div id="theme-selector">
+        <div id="to-blue"></div>
+        <div id="to-green"></div>
+        <div id="to-red"></div>
+    </div>
     <!--Header-->
     <section id="global">
         <header>
@@ -35,8 +42,8 @@
 
             <nav id="menu">
                 <ul>
-                    <li><a href="#">Start</a></li>
-                    <li><a href="#">About me</a></li>
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="about.html">About me</a></li>
                     <li><a href="#">Clock</a></li>
                     <li><a href="#">Contact</a></li>
 
@@ -89,15 +96,15 @@
                     <form>
                         <label for="name">Name</label>
                         <br/>
-                        <input type="text" placeholder="Introduce your name..." name="name"></input>
+                        <input type="text" placeholder="Introduce your name..." name="name" id="form-name"></input>
 
                         <label for="email">Email</label>
                         <br/>
-                        <input type="text" placeholder="Introduce your email..." name="email"></input>
+                        <input type="text" placeholder="Introduce your email..." name="email" id="form-email"></input>
 
                         <label for="company">Company</label>
                         <br/>
-                        <input type="text" placeholder="Introduce your company..." name="company"></input>
+                        <input type="text" placeholder="Introduce your company..." name="company" id="form-company"></input>
 
                         <input type="submit" value="Send"></input>
 
@@ -118,6 +125,8 @@
 
     <footer>
         Page coded in HTML and JavaScript by David Naranjo
+        <br/>
+        <a href="#" class="up">Go to the top</a>
 
     </footer>
 

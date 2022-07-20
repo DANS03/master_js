@@ -12,7 +12,6 @@
     }
     
     body {
-        background: url('../images/blue-background.jpg');
         background-attachment: fixed;
         /*This leaves pinned the background and avoids movement of if*/
     }
@@ -31,7 +30,6 @@
         font-size: 30px;
         line-height: 75px;
         letter-spacing: 4px;
-        background: royalblue;
         color: white;
         text-align: center;
         width: 385px;
@@ -60,10 +58,6 @@
         transition: all 300ms;
     }
     
-    #menu ul li:hover {
-        background: royalblue;
-    }
-    
     #menu a {
         display: block;
         color: white;
@@ -78,8 +72,9 @@
         font-family: Helvetica, Arial;
     }
     
-    #posts h2 {
+    h2 {
         font-size: xx-large;
+        font-family: Helvetica, Arial;
     }
     
     .post {
@@ -104,7 +99,6 @@
     .button-more {
         display: block;
         padding: 15px;
-        background: royalblue;
         color: white;
         text-decoration: none;
         margin-top: 10px;
@@ -169,4 +163,42 @@
     .bx-wrapper,
     .bx-viewport {
         height: 250px !important;
+    }
+    
+    #theme-selector {
+        position: fixed;
+        top: 40%;
+        background: rgba(51, 51, 51, 0.70);
+        width: 50px;
+        height: 100px;
+    }
+    
+    #to-blue,
+    #to-green,
+    #to-red {
+        width: 25px;
+        height: 25px;
+        border: 1px solid white;
+        display: block;
+        margin: 0px auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+    
+    #to-blue {
+        background: royalblue;
+    }
+    
+    #to-green {
+        background: rgb(0, 179, 0);
+    }
+    
+    #to-red {
+        background: rgb(180, 11, 11);
+    }
+    
+    .up {
+        color: white;
+        display: block;
     }

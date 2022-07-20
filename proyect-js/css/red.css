@@ -1,0 +1,15 @@
+#logo {
+    background: rgb(180, 11, 11);
+}
+
+#menu ul li:hover {
+    background: rgb(180, 11, 11);
+}
+
+.button-more {
+    background: rgb(180, 11, 11);
+}
+
+body {
+    background: url('../images/red-background.jpg');
+}
