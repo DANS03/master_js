@@ -120,12 +120,27 @@ $(document).ready(function() {
 
     }
 
-    //move it into another file
+    //move it into another file for about
     if (window.location.href.indexOf('about') > -1) {
         $('#accordion').accordion();
     }
 
 
+    //move it into another file for clock
+    if (window.location.href.indexOf('clock') > -1) {
+        setInterval(function() {
+            var clock = moment().format('hh:mm:ss');
+            $('#clock').html(clock);
+        }, 1000)
+
+    }
+
+    //Form validation
+    if (window.location.href.indexOf('contact') > -1) {
+        $.validate({
+            lang: 'en'
+        });
+    }
 
 
 });

@@ -202,3 +202,28 @@
         color: white;
         display: block;
     }
+    
+    #clock {
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Helvetica, Arial;
+        border: 5px dashed black;
+        margin: 0 auto;
+        width: 35%;
+        align-items: center;
+        padding: 30px;
+    }
+    
+    #form_contact {
+        margin-top: 10px;
+        font-family: Helvetica, Arial;
+    }
+    
+    #form_contact label {
+        font-family: Helvetica, Arial;
+        display: block;
+    }
+    
+    #form_contact span {
+        color: red;
+    }

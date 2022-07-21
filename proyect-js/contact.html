@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact INFO</title>
+
+    <!--Loading CSS-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link id="theme" rel="stylesheet" type="text/css" href="css/blue.css" />
+
+    <!--JQuery-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!--Plugin validation-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+
+    <!--My Scripts-->
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="theme-selector">
+        <div id="to-blue"></div>
+        <div id="to-green"></div>
+        <div id="to-red"></div>
+    </div>
+    <!--Header-->
+    <section id="global">
+        <header>
+            <div id="logo">
+                <h1>JS Proyect</h1>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="clock.html">Clock</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+
+
+
+
+        <section id="content">
+            <div id="form_contact">
+
+                <form action="" id="contact-form">
+
+                    <label for="name">Name</label>
+                    <br/>
+                    <input type="text" placeholder="Enter your name..." name="name" data-validation="length aplhanumeric" data-validation-length='min3' />
+                    <br/>
+                    <label for="lastname">Lastname</label>
+                    <br/>
+                    <input type="text" placeholder="Enter your Lstname..." name="lastname" data-validation="length aplhanumeric" data-validation-length='min3' />
+                    <br/>
+                    <label for="email">Email</label>
+                    <br/>
+                    <input type="text" placeholder="Enter your Email..." name=' email ' data-validation="email" />
+                    <br/>
+                    <label name="company">Company</label>
+                    <br/>
+                    <input type="text" placeholder="Enter the name of the company..." name="company" data-validation="length aplhanumeric" data-validation-length='min2' />
+                    <br/>
+                    <label>Pronouns</label>
+                    <select name="pronouns">
+                        <option>She/her</option>
+                        <option>He/him</option>
+                        <option>Other</option>
+                    </select>
+                    <br/>
+                    <input type="submit" value="Send" />
+
+                </form>
+
+
+            </div>
+
+
+
+
+
+            <div class="clearfix"></div>
+
+
+
+        </section>
+
+
+    </section>
+
+
+    <footer>
+        Page coded in HTML and JQuery by David Naranjo
+        <br/>
+        <a href="#" class="up">Go to the top</a>
+
+    </footer>
+
+
+</body>
+
+<html>
