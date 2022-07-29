@@ -8,6 +8,7 @@ interface ClassesTemplate{
 
 //if you want to create a instance of your class in another file then you got to export it
 
+
 //CLASS: -->A class is the mould of an object 
 class Classes implements ClassesTemplate{//The name of the class ussually has the same name of the doc
 
