@@ -7,6 +7,7 @@ import { ShoesComponent } from './shoes/shoes.component';
 import { VideogameComponent } from './videogame/videogame.component';
 import { CursosComponent } from './cursos/cursos.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

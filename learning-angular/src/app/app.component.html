@@ -6,8 +6,14 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div>
-    <h1>Welcome to angular html </h1>
+<div [ngStyle]="{
+    'background':'#ccc',
+    'border': '5px solid black',
+    'border-color': color,
+    'padding': '20px'
+    
+}">
+    <h1>Welcome to angular html: {{title}} </h1>
 
     <button (click)="hideVideogames()">Hide Games</button>
     <videogame *ngIf="showVideogames"></videogame>

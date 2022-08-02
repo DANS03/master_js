@@ -1,6 +1,5 @@
 <h2>{{title}}</h2>
 <ul>
-    <li>Vans</li>
-    <li>Nike</li>
-    <li>Adidas</li>
+    <li *ngFor=" let shoe of shoes">{{shoe.brand}} -- ${{shoe.price}}</li>
+
 </ul>
