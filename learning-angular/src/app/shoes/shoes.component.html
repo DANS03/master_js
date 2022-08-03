@@ -1,5 +1,19 @@
 <h2>{{title}}</h2>
 <ul>
-    <li *ngFor=" let shoe of shoes">{{shoe.brand}} -- ${{shoe.price}}</li>
+    <li *ngFor=" let shoe of shoes">
+        {{shoe.brand}} -- ${{shoe.price}}
+        <span *ngIf="shoe.price <= 80">For sale!</span>
+    </li>
+
+
+    <p>Most of our shoes are color:</p>
+    <ul [ngSwitch]="color">
+        <li *ngSwitchCase="'yellow'">the main color is
+            <span style="color:yellow">>yellow</span></li>
+        <li *ngSwitchCase=" 'red' ">the main color <span style="color:red">is red</span></li>
+        <li *ngSwitchCase=" 'blue' ">the main color is <span style="color:royalblue">blue</span></li>
+        <li *ngSwitchCase=" 'green' ">the main color is <span styel="color:green">green</span></li>
+    </ul>
+
 
 </ul>
