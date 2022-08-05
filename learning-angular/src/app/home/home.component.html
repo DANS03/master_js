@@ -1,1 +1,16 @@
-<p>home works!</p>
+<h2>Main page</h2>
+
+<div *ngIf="identify then authentificated ;else nonAuthentificated">
+
+</div>
+
+<ng-template #authentificated>
+    <h3>You are authentificated in the app</h3>
+</ng-template>
+
+
+
+<ng-template #nonAuthentificated>
+    <p>You are not anthetificated press this button to authentificate</p>
+    <button (click)="authentificate()">Authentificate</button>
+</ng-template>
