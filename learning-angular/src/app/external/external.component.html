@@ -1,1 +1,16 @@
-<p>external works!</p>
+{{date | date:'fullDate' | uppercase}}
+<br/> {{date | date:'dd/MM/yy'}}
+<br/> {{'HELLO WORLD USING PIPES' | lowercase}}
+<br/>{{5 | calculator: 3}}
+<hr/>
+
+<div *ngIf="!user">
+    Loading...
+</div>
+
+<input type="text" [(ngModel)]="userId" (keyup.enter)="loadUser()" />
+
+<div *ngIf="user">
+    <img src="{{user.data.avatar}}" />
+    <h2>{{user.data.first_name + ' '+ user.data.last_name}}</h2>
+</div>

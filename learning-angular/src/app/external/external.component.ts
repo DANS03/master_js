@@ -9,21 +9,34 @@ import { RequestService } from '../service/request.service';
 })
 export class ExternalComponent implements OnInit {
 
+  public user: any;
+  public userId: number ;
+  public date: any;
+
   constructor(
     private _requestService : RequestService
     ) {
-      console.log('hi');
+      this.userId = 1 ;
    }
 
-  ngOnInit(): void {
-    this._requestService.getUser().subscribe(
+  ngOnInit(){
+    this.loadUser();
+    this.date= new Date (2022,6,8) ; // that how you hard code a date
+  }
+
+  loadUser(){
+    this.user= false;
+    this._requestService.getUser(this.userId).subscribe( 
       result => {
         console.log(result);
+        this.user= result;
+        
       },
       error => {
         console.log(<any>error);
       }
     );
+    
   }
 
 }

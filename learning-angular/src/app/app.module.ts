@@ -12,6 +12,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { ExternalComponent } from './external/external.component';
 
+import { CalculatorPipe } from './pipes/calculator.pipe';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,14 @@ import { ExternalComponent } from './external/external.component';
     ShoesComponent,
     CursosComponent,
     HomeComponent,
-    ExternalComponent
+    ExternalComponent,
+    CalculatorPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    HttpClientModule
 
   ],
   providers: [

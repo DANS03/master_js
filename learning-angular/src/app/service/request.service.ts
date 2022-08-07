@@ -13,8 +13,8 @@ export class RequestService{
         
     }
 
-    getUser(){
-        return this._http.get(this.url + 'api/users/2');
+    getUser( userId : number ){
+        return this._http.get(this.url + 'api/users/' + userId);
     }
 
 }
