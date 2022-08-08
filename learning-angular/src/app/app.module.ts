@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { ExternalComponent } from './external/external.component';
 
 import { CalculatorPipe } from './pipes/calculator.pipe';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CalculatorPipe } from './pipes/calculator.pipe';
     CursosComponent,
     HomeComponent,
     ExternalComponent,
-    CalculatorPipe
+    CalculatorPipe,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

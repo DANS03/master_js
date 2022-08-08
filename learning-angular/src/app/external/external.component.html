@@ -14,3 +14,36 @@
     <img src="{{user.data.avatar}}" />
     <h2>{{user.data.first_name + ' '+ user.data.last_name}}</h2>
 </div>
+
+<hr/>
+
+<h2>Create User</h2>
+
+<form #newUserForm="ngForm" (ngSubmit)="onSubmit(newUserForm)">
+    <label for="name">Name</label>
+    <br/>
+
+    <input type='text' name='name' #name="ngModel" [(ngModel)]="newUser.name" required pattern="[a-zA-Z]+" />
+
+    <span *ngIf="name.touched && !name.valid">The last name is obligatory</span>
+
+    <br/>
+
+    <label for="job">Job</label>
+    <br/>
+
+    <input type='text' name='job' required #job="ngModel" [(ngModel)]="newUser.job" required pattern="[a-zA-Z]+" />
+
+    <span *ngIf="job.touched && !job.valid">The Job Position is obligatory</span>
+
+    <br/>
+
+    <input type="submit" value="Send User" [disabled]="!newUserForm.form.valid" />
+
+
+    <div *ngIf="savedUser">
+        <h2>User saved correctly</h2>
+        <h3>{{savedUser.name}}</h3>
+        <h3>{{savedUser.job}}</h3>
+    </div>
+</form>

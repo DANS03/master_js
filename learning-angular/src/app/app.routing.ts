@@ -9,6 +9,7 @@ import { ShoesComponent } from "./shoes/shoes.component";
 import { VideogameComponent } from "./videogame/videogame.component";
 import { CursosComponent } from "./cursos/cursos.component";
 import { ExternalComponent } from "./external/external.component";
+import { ContactComponent } from "./contact/contact.component";
 
 //Array of routes
 
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
     { path:'cursos', component: CursosComponent},
     { path:'cursos/:name', component: CursosComponent},
     { path:'external', component: ExternalComponent},
+    { path:'contact' , component: ContactComponent },
     { path:'**' , component: HomeComponent}
    
 
