@@ -2,7 +2,14 @@
 
 var express = require('express');
 const { route } = require('../app');
-const { getProjects, updateProject, deleteProject } = require('../controllers/project');
+
+//Middlewares
+
+//A middleware is something that excecutes befor the controller
+var multipart = require('connect-multiparty');
+var multipartMiddleware = multipart({ uploadDir: './uploads' });
+
+
 var projectController = require('../controllers/project');
 
 var router = express = express.Router();
@@ -15,10 +22,12 @@ router.post('/saveProject', projectController.saveProject);
 
 router.get('/project/:id?', projectController.getProject);
 
-router.get('/allProjects', getProjects);
+router.get('/allProjects', projectController.getProjects);
 
-router.put('/projectUpdate/:id', updateProject);
+router.put('/projectUpdate/:id', projectController.updateProject);
 
-router.delete('/projectDelete/:id', deleteProject);
+router.delete('/projectDelete/:id', projectController.deleteProject);
+
+router.post('/uploadImage/:id', multipartMiddleware, projectController.uploadImage);
 
 module.exports = router;

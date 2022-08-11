@@ -3,7 +3,11 @@ const { prependListener } = require('../app');
 //a controller is a series of method that a class will be able to do
 
 var Project = require('../models/projects');
-//const { param } = require('../routes/project');
+const { param } = require('../routes/project');
+
+var fs = require('fs');
+
+
 
 var controller = {
     home: function(req, res) {
@@ -129,6 +133,58 @@ var controller = {
             });
 
         });
+    },
+
+    uploadImage: function(req, res) {
+        var projectId = req.params.id;
+        var fileName = "imageNotUploaded";
+
+        if (req.files) {
+
+            var filePath = req.files.image.path;
+            var fileSplit = filePath.split('\\');
+            var fileName = fileSplit[1];
+            var extSplit = fileName.split('\.');
+            var fileExt = extSplit[1];
+
+
+            if (fileExt == 'jpg' || fileExt == 'png' || fileExt == 'jpeg' || fileExt == 'gif') {
+
+
+
+                Project.findByIdAndUpdate(projectId, { image: fileName }, { new: true }, (err, projectUpdate) => {
+                    if (err) return res.status(500).send({
+                        message: 'An error has occured',
+                        err: err
+                    });
+
+                    if (!projectUpdate) res.status(404).send({
+                        message: "Unable to find image or id"
+                    });
+
+                    res.status(200).send({
+                        project: projectUpdate,
+                    });
+                });
+            } else {
+
+                fs.unlink(filePath, (err) => {
+                    return res.status(200).send({
+                        message: 'Unvalid extention'
+                    });
+                });
+
+            }
+
+
+        } else {
+
+            return res.status(200).send({
+                message: fileName
+            });
+        }
+
+
     }
 
 
