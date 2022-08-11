@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var app = express();
 
 //load route files
+var projectRoutes = require('./routes/project');
 
 //middlewares
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -16,6 +17,7 @@ app.use(bodyParser.json());
 //CORS
 
 //routes
+/*
 app.get('/', (req, res) => {
     res.status(200).send(
         "<h1>Landing Page!</h1>"
@@ -30,7 +32,9 @@ app.post('/test', (req, res) => {
     res.status(200).send({
         message: "Hello world form my node JS Api"
     });
-});
+});*/
+
+app.use('/api', projectRoutes);
 
 //exports
 
