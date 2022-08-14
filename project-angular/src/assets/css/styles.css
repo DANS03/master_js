@@ -112,3 +112,42 @@ footer {
     margin-top: 50px;
     color: rgba(0, 0, 0, 0.5)
 }
+
+
+/*About me*/
+
+#title {
+    text-align: center;
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 70px;
+}
+
+#title h1 {
+    font-size: 60px;
+}
+
+#title h2 {
+    color: gray;
+    font-size: 25px;
+}
+
+#title p a {
+    color: gray
+}
+
+article.about {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.about h2 {
+    font-size: 25px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.about p {
+    padding-top: 20px;
+    text-align: justify;
+}
