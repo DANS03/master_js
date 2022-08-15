@@ -151,3 +151,65 @@ article.about {
     padding-top: 20px;
     text-align: justify;
 }
+
+
+/*Form*/
+
+.container {
+    padding: 50px;
+    padding-top: 10px;
+}
+
+.container h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+form {
+    width: 50%;
+}
+
+form label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea {
+    width: 80%;
+    padding: 5px;
+}
+
+form button,
+form input[type="submit"] {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 15px;
+    background: royalblue;
+    color: white;
+    border: 1px solid gray;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+    background: rgb(105, 136, 228);
+}
+
+form input[disabled] {
+    background: rgb(187, 199, 235);
+    cursor: not-allowed;
+}
+
+form input[disabled]:hover {
+    background: rgb(187, 199, 235);
+}
+
+.unvalid {
+    color: rgb(197, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}

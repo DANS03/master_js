@@ -1,1 +1,64 @@
-<p>create works!</p>
+<div class="container">
+
+    <h2>{{title}}</h2>
+
+
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+        <p>
+            <label for="name">Name</label>
+            <br/>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" placeholder="Introduce the name..." required/>
+
+            <span *ngIf="name.touched && !name.valid" class="unvalid">
+                Name is required
+            </span>
+
+        </p>
+        <p>
+            <label for="description">Description</label>
+            <br/>
+            <textarea type="text" name="description" #description="ngModel" [(ngModel)]="project.description" placeholder="Introduce the description..." required></textarea>
+
+
+            <span *ngIf="description.touched && !description.valid" class="unvalid">
+                Description is required
+            </span>
+        </p>
+        <p>
+            <label for="category">Categoty</label>
+            <br/>
+            <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" placeholder="Introduce the category..." required />
+
+            <span *ngIf="category.touched && !category.valid" class="unvalid">
+                Category is required
+            </span>
+        </p>
+        <p>
+            <label for="year">Year</label>
+            <br/>
+            <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" required/>
+
+            <span *ngIf="year.touched && !year.valid" class="unvalid">
+                Year is required
+            </span>
+
+        </p>
+        <p>
+            <label for="lang">Language</label>
+            <br/>
+            <input type="text" name="lang" #lang="ngModel" [(ngModel)]="project.langs" placeholder="Introduce the languages..." required/>
+
+            <span *ngIf="lang.touched && !lang.valid" class="unvalid">
+                Language is required
+            </span>
+        </p>
+
+        <p>
+            <label for="img">Image</label>
+            <br/>
+            <input type="file" name="image" #name="ngModel" [(ngModel)]="project.image" />
+        </p>
+
+        <input type="submit" value="Send" [disabled]="!projectForm.form.valid" />
+    </form>
+</div>
