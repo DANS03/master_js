@@ -2,7 +2,15 @@
 
     <h2>{{title}}</h2>
 
+    <div id="deliverySuccess" *ngIf="status == 'success'">
+        <p>The project has been created succesfully !
+        </p>
+    </div>
 
+    <div id="deliveryFailed" *ngIf="status == 'failed'">
+        <p>The project had an issue!
+        </p>
+    </div>
     <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
         <p>
             <label for="name">Name</label>
@@ -56,7 +64,7 @@
         <p>
             <label for="img">Image</label>
             <br/>
-            <input type="file" name="image" #name="ngModel" [(ngModel)]="project.image" />
+            <input type="file" name="image" (change)='fileChangeEvent($event)' />
         </p>
 
         <input type="submit" value="Send" [disabled]="!projectForm.form.valid" />

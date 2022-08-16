@@ -30,4 +30,6 @@ router.delete('/projectDelete/:id', projectController.deleteProject);
 
 router.post('/uploadImage/:id', multipartMiddleware, projectController.uploadImage);
 
+router.get('/getImage/:image', projectController.getImageFile);
+
 module.exports = router;
