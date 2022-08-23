@@ -5,6 +5,10 @@
     <div id="deliverySuccess" *ngIf="status == 'success'">
         <p>The project has been created succesfully !
         </p>
+
+        <p>You can see the project
+            <a [routerLink]="['/project',saved_project._id]">here. </a>
+        </p>
     </div>
 
     <div id="deliveryFailed" *ngIf="status == 'failed'">

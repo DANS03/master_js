@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import  { Observable } from 'rxjs'; 
 import { Project } from '../models/project';
 import { Global } from './global';
+import { identifierName } from '@angular/compiler';
 
 @Injectable() export class ProjectService{
     public url: string;
@@ -31,5 +32,12 @@ import { Global } from './global';
 
     }
 
+
+    getProject(id:number):Observable<any>{
+        
+        let headers = new HttpHeaders().set('Content-Type','application/json');
+
+        return this._http.get(this.url + '/project/' + id , {headers:headers});
+    }
 
 }
