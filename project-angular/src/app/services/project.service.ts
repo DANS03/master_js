@@ -38,6 +38,19 @@ import { identifierName } from '@angular/compiler';
         let headers = new HttpHeaders().set('Content-Type','application/json');
 
         return this._http.get(this.url + '/project/' + id , {headers:headers});
-    }
+    };
+
+    deleteProject(id:number):Observable<any>{
+        let headers = new HttpHeaders().set('Content-Type','application/json');
+        
+        return this._http.delete(this.url + '/projectDelete/' + id , {headers:headers});
+    };
+
+    updateProject(project:any):Observable<any>{
+        let params = JSON.stringify(project);
+        let headers = new HttpHeaders().set('Content-Type','application/json');
+
+        return this._http.put(this.url + '/projectUpdate/' + project._id, params , {headers:headers});
+    };
 
 }

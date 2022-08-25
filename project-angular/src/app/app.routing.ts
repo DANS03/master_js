@@ -1,4 +1,4 @@
-import { createComponent, ModuleWithProviders } from "@angular/core";
+import { Component, createComponent, ModuleWithProviders } from "@angular/core";
 
 import { Routes, RouterModule } from "@angular/router";
 
@@ -8,7 +8,7 @@ import { CreateComponent } from './components/create/create.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import { DetailsComponent } from "./components/details/details.component";
-
+import { EditComponent } from "./components/edit/edit.component";
 
 const appRoutes: Routes = [
     { path : '' , component: AboutMeComponent},
@@ -17,6 +17,7 @@ const appRoutes: Routes = [
     { path : 'create' , component : CreateComponent },
     { path : 'contact' , component : ContactComponent },
     { path : 'project/:id' , component : DetailsComponent },
+    { path : 'edit-project/:id', component : EditComponent},
     { path : '**' , component : ErrorComponent }
 
 

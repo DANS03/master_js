@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container" *ngIf="project._id">
 
     <h2>{{title}}</h2>
 
-    <div id="deliverySuccess" *ngIf="status == 'success'">
+    <div id="deliverySuccess" *ngIf="status == 'success' && project._id">
         <p>The project has been created succesfully !
         </p>
 
@@ -68,9 +68,14 @@
         <p>
             <label for="img">Image</label>
             <br/>
-            <input type="file" name="image" (change)='fileChangeEvent($event)' />
-        </p>
 
-        <input type="submit" value="Send" [disabled]="!projectForm.form.valid" />
+            <div class="img" *ngIf="project.image">
+                <img src="{{url + '/getImage/'+ project.image}}" width="100px" />
+            </div>
+
+            <input type="file" name="image" (change)='fileChangeEvent($event)' />
+
+
+            <input type="submit" value="Send" [disabled]="!projectForm.form.valid" />
     </form>
 </div>

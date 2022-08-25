@@ -204,7 +204,8 @@ form textarea {
 form button,
 form input[type="submit"],
 .editButton,
-.deleteButton {
+.deleteButton,
+.cancelButton {
     display: block;
     font-size: 20px;
     padding: 10px;
@@ -215,11 +216,24 @@ form input[type="submit"],
 }
 
 .editButton,
-.deleteButton {
+.deleteButton,
+.cancelButton {
     width: 40%;
     margin-left: 20px;
     display: inline-block;
     text-align: center;
+}
+
+.cancelButton {
+    background-color: darkgreen;
+}
+
+.editButton {
+    background-color: orange;
+}
+
+.deleteButton {
+    background-color: rgb(179, 4, 4);
 }
 
 form button:hover,

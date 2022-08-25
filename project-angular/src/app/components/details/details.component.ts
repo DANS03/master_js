@@ -14,6 +14,7 @@ export class DetailsComponent implements OnInit {
   
   public url: string;
   public project: any;
+  public confirm: boolean;
 
   constructor(
     private _projectService: ProjectService,
@@ -23,6 +24,7 @@ export class DetailsComponent implements OnInit {
 
     this.url = Global.url;
     this.project = '';
+    this.confirm = false;
 
    }
 
@@ -40,12 +42,27 @@ export class DetailsComponent implements OnInit {
     this._projectService.getProject(id).subscribe(
       response => {
         this.project = response.project
-        console.log(this.project);
+        
       },
       error => {
         console.log(<any>error);
       }
     )
   };
+
+  deleteProject(id:number){
+    
+    this._projectService.deleteProject(id).subscribe(
+      response => {
+        if(response.project){
+          this._router.navigate(['/projects']);
+        }
+      },
+      error => {
+        console.log(error);
+      }
+
+    )
+  }
 
 }
