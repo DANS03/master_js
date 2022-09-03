@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  public sliderWidth:any; 
+  public width:any;
+
+  constructor() { 
+    this.sliderWidth = null;
+    this.width = null;
+  }
 
   ngOnInit(): void {
+
+    $("#logo").click(function(e: any){
+      e.preventDefault();
+      $("header").css("background","green")
+                  .css("height","150px");
+    });
+
+  }
+
+
+  loadSlider(){
+    console.log("enter")
+    this.width= this.sliderWidth
   }
 
 }

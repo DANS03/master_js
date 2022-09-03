@@ -1,1 +1,11 @@
-<p>contact works!</p>
+<div class="container">
+    <h1>Contact</h1>
+
+    <input type="number" [(ngModel)]="sliderWidth" (keyup.enter)="loadSlider()" />
+
+    <div *ngIf=width>
+        <p>Size of slide: {{width}}</p>
+    </div>
+
+    <app-slider [width]="width"></app-slider>
+</div>

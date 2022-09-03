@@ -14,6 +14,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import { DetailsComponent } from './components/details/details.component';
 import { EditComponent } from './components/edit/edit.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { EditComponent } from './components/edit/edit.component';
     ErrorComponent,
     DetailsComponent,
     EditComponent,
+    SliderComponent,
    
   ],
   imports: [
